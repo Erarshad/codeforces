@@ -38,6 +38,9 @@ outputCopy
     int m=sc.nextInt();
     int n=sc.nextInt();
     int ans=n*m/2;
+    /**
+     * although the correct formula is m/2*n, but in programming language we should say like that
+     */
     
    
     System.out.println(ans);
