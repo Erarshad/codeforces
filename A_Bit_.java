@@ -44,6 +44,36 @@ outputCopy
 import java.util.*;
 public class A_Bit_{
 public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
     
+      int test_cases=sc.nextInt();
+      int x=0;
+        while(test_cases-->0){
+            String syntax=sc.next();
+             
+            if(syntax.charAt(0)=='+'&& syntax.charAt(1)=='+'){
+                ++x;
+
+            }else if(syntax.charAt(0)=='-'&& syntax.charAt(1)=='-'){
+                --x;
+
+            }else if(syntax.charAt(1)=='+' && syntax.charAt(1)=='+'){
+                x++;
+            }
+            else if(syntax.charAt(1)=='-' && syntax.charAt(1)=='-'){
+                x--;
+            }
+
+
+
+         
+            
+    
+    
+    
+        }
+
+
+        System.out.println(x);
 }
 }
