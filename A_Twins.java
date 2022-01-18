@@ -10,38 +10,24 @@ public class A_Twins{
             arr[i] = scn.nextInt();
             sum += arr[i];
         }
-        Arrays.sort(arr);
-        int j = n - 1;
-        int ssf = 0;
-        int coins = 0;
-        while(j >= 0){
-            if(ssf + arr[j] > sum - arr[j]){
-                coins++;
-                break;
-            }else{
-                ssf += arr[j];
-                sum -= arr[j];
-                j--;
-                coins++;
-            
-            }
-        }
-        System.out.println(coins);
+        min = Integer.MAX_VALUE;
+        comb(arr, 0, sum, 0, 0);
+        System.out.println(min);
     }
-    // public static void comb(int [] arr, int idx, int sum, int ssf, int coins){
-    //     // if(ssf > sum){
-    //     //     min = Math.min(coins, min);
-    //     //     return;
-    //     // }
-    //     if(idx == arr.length){
-    //         if(ssf > sum){
-    //             min = Math.min(min, coins);
-    //         }
-    //         return;
-    //     }
-    //     comb(arr, idx + 1, sum - arr[idx], ssf + arr[idx], coins + 1);
-    //     comb(arr, idx + 1, sum, ssf, coins);
-    // }
+    public static void comb(int [] arr, int idx, int sum, int ssf, int coins){
+        // if(ssf > sum){
+        //     min = Math.min(coins, min);
+        //     return;
+        // }
+        if(idx == arr.length){
+            if(ssf > sum){
+                min = Math.min(min, coins);
+            }
+            return;
+        }
+        comb(arr, idx + 1, sum - arr[idx], ssf + arr[idx], coins + 1);
+        comb(arr, idx + 1, sum, ssf, coins);
+    }
 
     
 }
