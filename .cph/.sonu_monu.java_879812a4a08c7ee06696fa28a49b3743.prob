@@ -1,0 +1,1 @@
+{"name":"Local: sonu_monu","url":"d:\\competitive programming\\code_forces\\sonu_monu.java","tests":[{"id":1642579608889,"input":"4\n3 5 9 8","output":"true"},{"id":1642581015234,"input":"3\n3 6 0","output":"false"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\competitive programming\\code_forces\\sonu_monu.java","group":"local","local":true}
